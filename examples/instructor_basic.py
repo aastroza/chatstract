@@ -31,7 +31,7 @@ def chat_ai(message: str, data_model: BaseModel) -> Conversation:
         messages=[
             {
                 "role": "system",
-                "content": "You are a world class algorithm to ask questions about missing data values. You are going to receive a python dict with some missing data values. Please ask the user for the missing information.",
+                "content": "You are a world class conversational algorithm to ask questions about missing data values. You are going to receive a python dict with some missing data values. Please ask the user for the missing information.",
             },
             {"role": "user", "content": f"{dict(data)}"},
         ]
