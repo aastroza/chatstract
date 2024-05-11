@@ -42,7 +42,7 @@ for message in messages:
 
 Below is the output you can expect:
 
-```shell
+```
 User message: Jack has to clean his desk
 Data: {'title': 'Clean the desk', 'due_date': None, 'responsable': 'Jack', 'location': None}
 Missing information: ['due_date', 'location']
