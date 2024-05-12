@@ -6,7 +6,11 @@ from pydantic import BaseModel, create_model
 from pydantic.fields import FieldInfo
 
 
-def partial_model(model: Type[BaseModel]):
+def partial_model(model: Type[BaseModel]) -> Type[BaseModel]:
+    """
+    Create a version of a Pydantic model where all fields are optional.
+    Code from: https://stackoverflow.com/a/76560886
+    """
     def make_field_optional(field: FieldInfo, default: Any = None) -> Tuple[Any, FieldInfo]:
         new = deepcopy(field)
         new.default = default
