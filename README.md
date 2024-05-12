@@ -28,11 +28,11 @@ from chatstract.core import Chat
 
 chat = Chat(data_model = Task)
 
-messages = ["Jack has to clean his desk",
+messages = ["Jason has to clean his desk",
             "The deadline is september 7th",
             "This task is for the Downtown office",
             "I messed up, the task is for Dorothy at the Uptown office",
-            "The status for this task is 'Done'",]
+            "The status for this task is 'Done'"]
 
 for message in messages:
     info = chat.chat_ai(message)
