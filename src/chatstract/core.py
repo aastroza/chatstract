@@ -12,7 +12,7 @@ class Question(BaseModel):
                                     default=None)
     
     @model_validator(mode="after")
-    def validate_sources(self, info: ValidationInfo) -> "Question":
+    def validate_missing_fields(self, info: ValidationInfo) -> "Question":
         mandatory_fields = info.context.get("mandatory_fields", [])
         if self.missing_information_key not in mandatory_fields:
             self.missing_information_key = None
