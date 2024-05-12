@@ -27,6 +27,9 @@ def partial_model(model: Type[BaseModel]) -> Type[BaseModel]:
     )
 
 def list_mandatory(model: Type[BaseModel]) -> List[str]:
+    """
+    List the mandatory fields of a Pydantic model.
+    """
     mandatory_fields = []
     for name, field in model.model_fields.items():
         # Check if the field is Optional
